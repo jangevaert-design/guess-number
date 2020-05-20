@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Owner"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-05-20 04:23:52 PM"/>
+        <attribute name="created" value="T3duZXI7SkFOOzIwMjAtMDUtMjA7MDM6MDk6MzkgUE07MjAxOQ=="/>
+        <attribute name="edited" value="T3duZXI7SkFOOzIwMjAtMDUtMjA7MDQ6MjM6NTIgUE07MTsyMTE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Secret" type="Integer" array="False" size=""/>
+            <assign variable="Secret" expression="Random(100) + 1"/>
+            <declare name="Guess" type="Integer" array="False" size=""/>
+            <assign variable="Guess" expression="0"/>
+            <output expression="&quot;Choose a number between 0 and 100&quot;" newline="True"/>
+            <while expression="Guess != Secret">
+                <input variable="(Guess)"/>
+                <if expression="(Guess &lt; Secret)">
+                    <then>
+                        <output expression="&quot;Higher&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="Guess &gt; Secret">
+                            <then>
+                                <output expression="&quot;Lower&quot;" newline="False"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Correct, great job!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
